@@ -15,12 +15,7 @@ arboles = [{'direccion': f'Calle {i}'} for i in range(tamaño_lista)]
 # Elegir una dirección objetivo aleatoria
 direccion_objetivo = f'Calle {random.randint(0, tamaño_lista - 1)}'
 
-# Funcion de búsqueda por dirección lineal
-def buscar_por_direccion_lineal(arboles, direccion_objetivo):
-    for i in range(len(arboles)):
-        if arboles[i]['direccion'] == direccion_objetivo:
-            return i
-    return -1
+
 
 # Medicion tiempo de búsqueda lineal
 inicio = time.time()
@@ -108,7 +103,7 @@ arbol = indice_direccion.get(direccion_objetivo)
 fin_hash = time.time()
 
 tiempo_hash2 = fin_hash - inicio_hash
-
+print("........................................................................")
 # Mostrar resultados hash2
 if arbol:
     print(f"Búsqueda Hash2: Árbol encontrado = {arbol}, Tiempo = {tiempo_hash2:.6f} segundos")
